@@ -33,10 +33,7 @@ export default function page() {
       }
       if (password.length > 4) {
         //call api
-        const responce = await basicClient.post("/register", {
-          ...state,
-          name: "Rekha sultana",
-        });
+        const responce = await basicClient.post("/register", state);
         if (responce.status === 200) {
           toast.success(responce.data.message);
         } else {
