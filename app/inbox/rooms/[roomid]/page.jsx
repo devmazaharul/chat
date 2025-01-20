@@ -21,7 +21,7 @@ const [roomfriends, setroomfriends] = useState(null)
   },[])
 
 
-
+ 
   return (
     <div className='grid grid-cols-5'>
         <div className="col-span-1 bg-gray-800 w-full px-2 py-1 h-[100vh]  ">
