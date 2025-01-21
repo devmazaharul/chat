@@ -12,7 +12,7 @@ export default function Sidebar() {
   useEffect(() => {
     const getroom = async () => {
       const rooms = await axios.get(
-        "https://backend-chat-gamma.vercel.app/api/dashboard/rooms"
+        "https://backend-chat-gamma.vercel.app/api/inbox/rooms"
       );
 
      rooms.data.data.roomsList.reverse()
