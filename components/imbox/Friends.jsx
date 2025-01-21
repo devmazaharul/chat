@@ -1,11 +1,18 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-export default function Roomfriends({name,email,roomImage}) {
+import { usePathname } from "next/navigation";
+export default function Roomfriends({_id,roomId,name,email,roomImage}) {
+
+  let path=usePathname();
+  const newPaht=path.split("/")
+
+
   return (
     <>
-      <Link href={"/"}>
-        <li className="w-full hover:bg-gray-700   flex gap-2 items-center  p-2 my-2 rounded-md ">
+      <Link href={`/inbox/rooms/${roomId}/${_id}/message`}>
+  
+        <li className= {`${newPaht.includes(_id)?"bg-gray-700":""} w-full hover:bg-gray-700   flex gap-2 items-center  p-2 my-2 rounded-md`}>
           <div>
             <Image
               alt="friend_img"

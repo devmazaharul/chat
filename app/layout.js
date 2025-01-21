@@ -2,7 +2,6 @@ import { Space_Grotesk} from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { Toaster } from "react-hot-toast";
-
 const fontSetup=Space_Grotesk({
   weight:"400",
   subsets:["latin"],
@@ -16,8 +15,9 @@ export const metadata = {
   description: "Developed by mazaharul islam",
 };
 
-export default function RootLayout({ children }) {
+export default async function  RootLayout({ children }) {
 
+  
   
   return (
     <html lang="en">

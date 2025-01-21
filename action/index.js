@@ -5,6 +5,7 @@ axios.defaults.headers.common['Authorization'] = 'Bearer eyJhbGciOiJIUzI1NiIsInR
 
 export const basicClient=axios.create({
     baseURL:"https://backend-chat-gamma.vercel.app/api"
+   // baseURL:"http://localhost:7070/api"
 })
 
 

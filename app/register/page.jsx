@@ -1,5 +1,4 @@
 "use client";
-
 import { basicClient } from "@/action";
 import Loading from "@/utils/Spinner";
 import Link from "next/link";
