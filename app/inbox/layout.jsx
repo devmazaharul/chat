@@ -7,8 +7,13 @@ export default function layout({children}) {
 
   return (
     <div className='md:grid md:grid-cols-5 '>
-      <div className='col-span-1'>
-      <Sidebar/>
+      <div className='col-span-1  '>
+        <div className='md:hidden'>
+        <button className=''> Show rooms</button>
+        </div>
+    <div className='hidden md:block'>
+    <Sidebar/>
+    </div>
       </div>
       <div className='col-span-4'>
       {children}
