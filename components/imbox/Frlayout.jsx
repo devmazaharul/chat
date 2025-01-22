@@ -3,6 +3,7 @@ import { basicClient } from '@/action'
 import FrSidebar from '@/components/imbox/FrSidebar'
 import { usePathname } from 'next/navigation'
 import React, { useEffect, useState } from 'react'
+import toast from 'react-hot-toast'
 
 export default function Frlayout() {
 
@@ -14,7 +15,7 @@ useEffect(()=>{
   .then((res)=>{
    setfriend(res.data.data)
   }).catch((Err)=>{
-    console.log(Err)
+    toast.error("Something went wrong")
   })
 },[])
 
